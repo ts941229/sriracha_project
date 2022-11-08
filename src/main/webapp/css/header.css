@@ -1,0 +1,106 @@
+.header-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-bottom: 15px;
+}
+
+.top_header {
+    display: flex;
+    margin: 20px 30px 0 40px;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo i {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+/* 언어변경 시작 */
+
+.index-language {
+    text-decoration: none;
+    display: flex;
+    float: right;
+    align-items: center;
+    position: relative;
+    margin-top: -5px;
+    margin-left: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.index-language select {
+    align-items: center;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 50px;
+    color: black;
+    padding: 5px 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    padding: 0.4rem 1.3rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.index-language-black {
+    text-decoration: none;
+    display: flex;
+    float: right;
+    align-items: center;
+    position: relative;
+    margin-top: -5px;
+    margin-left: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.index-language-black select {
+    align-items: center;
+    font-size: 14px;
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    padding: 5px 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    padding: 0.4rem 1.3rem;
+    text-align: left;
+}
+
+/* 언어변경 끝 */
+
+.watcha {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.index-startButton a {
+    text-decoration: none;
+}
+
+.top-start_button1 {
+    display: flex;
+    float: right;
+    align-items: center;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 50px;
+    color: black;
+    padding: 5px 20px;
+    margin-top: 5px;
+}
+
+.logo_link {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,861 @@
+/* @import "menu.css"; */
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+    margin: 0;
+  }
+
+
+main {
+    display: block;
+  }
+
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+
+hr {
+box-sizing: content-box; /* 1 */
+height: 0; /* 1 */
+overflow: visible; /* 2 */
+}
+
+pre {
+font-family: monospace, monospace; 
+font-size: 1em; /* 2 */
+}
+
+a {
+background-color: transparent;
+}
+
+abbr[title] {
+border-bottom: none; /* 1 */
+text-decoration: underline; /* 2 */
+text-decoration: underline dotted; /* 2 */
+}
+
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; 
+  font-size: 1em; 
+}
+
+small {
+    font-size: 80%;
+  }
+
+sub,
+sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+
+sub {
+bottom: -0.25em;
+}
+
+sup {
+top: -0.5em;
+}
+
+img {
+    border-style: none;
+  }
+
+
+/* button, input, optgroup, select,
+textarea {
+font-family: inherit;
+font-size: 100%;
+line-height: 1.15; 
+margin: 0; 
+} */
+  
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+.css-9v5p4g-StyledSectionWithShrinkHeaderBar {
+    padding: 88px 0px 0px;
+}
+
+section {
+    display: block;
+}
+
+/*기본 정보 네비 부분*/
+.css-4g5dyy-HeaderBarPrimitive {
+    position: fixed;
+    left: 0px;
+    z-index: 50;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+    width: 100%;
+    padding: 0px 16px;
+    border-bottom: 1px solid rgb(227, 227, 227);
+    top: 62px;
+    text-align: left;
+    height: auto;
+}
+
+
+header {
+    display: block;
+}
+
+.css-uf1ume {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+/* .css-4g5dyy-HeaderBarPrimitive .css-uf1ume {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+    text-align: left;
+} */
+
+div {
+    display: block;
+}
+
+.css-a6n3jw-StylelessButton-HeaderCloseButtonSelf-TopLeftButton {
+    background-position: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin: 10px 0px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9IiNGRjJGNkUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTYuNzU1IDExLjk4OGw0Ljk1OCA0Ljk1OGEuOTguOTggMCAxIDEtMS4zODcgMS4zODdMNCAxMi4wMDdsLjAwNS0uMDA1TDQgMTEuOTk3bDYuMzQzLTYuMzQzYS45Ny45NyAwIDEgMSAxLjM3MyAxLjM3M2wtNC45NjEgNC45NnoiLz4KICAgICAgICA8cGF0aCBkPSJNNiAxMWgxM2ExIDEgMCAwIDEgMCAySDZ2LTJ6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=) !important;
+}
+
+.css-1d4ojes {
+    display: flex;
+    transform: translate3d(0px, 0px, 0px);
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 30px;
+    margin: 0px 4px 10px;
+    opacity: 1;
+    transition: all 150ms ease 0s;
+}
+
+.css-1bvesam {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    font-size: 22px;
+    line-height: 29px;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.css-10bjf2k {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+    margin: 11px 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transition: all 300ms ease 0s;
+}
+
+div {
+    display: block;
+}
+/*기본 정보 네비 부분 끝*/
+
+
+
+.css-1y901al-Row {
+    margin: 0px 20px;
+}
+
+.css-f4q6l4-VisualUl-DescriptionUl {
+    list-style: none;
+    padding: 0px;
+    max-width: 728px;
+    margin: 12px auto 0px;
+    margin-top: 88px;
+}
+user agent stylesheet
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.css-14a04hc-DescriptionList {
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    padding: 14px 0px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin: 0px;
+}
+user agent stylesheet
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (min-width: 1023px){
+.css-2ugu0-DescriptionTitle {
+    width: 200px;
+}
+}
+
+.css-2ugu0-DescriptionTitle {
+    color: rgb(120, 120, 120);
+    vertical-align: top;
+    width: 120px;
+}
+
+dt {
+    display: block;
+}
+
+.css-11yx0y9-DescriptionDetail {
+    flex: 1 1 0%;
+    color: rgb(0, 0, 0);
+    vertical-align: top;
+    margin: 0px 0px 0px 12px;
+}
+user agent stylesheet
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.css-14a04hc-DescriptionList {
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    padding: 14px 0px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin: 0px;
+}
+
+user agent stylesheet
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (min-width: 1023px){
+.css-2ugu0-DescriptionTitle {
+    width: 200px;
+}
+}
+
+.css-2ugu0-DescriptionTitle {
+    color: rgb(120, 120, 120);
+    vertical-align: top;
+    width: 120px;
+}
+user agent stylesheet
+dt {
+    display: block;
+}
+
+.css-11yx0y9-DescriptionDetail {
+    flex: 1 1 0%;
+    color: rgb(0, 0, 0);
+    vertical-align: top;
+    margin: 0px 0px 0px 12px;
+}
+user agent stylesheet
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.css-14a04hc-DescriptionList {
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    padding: 14px 0px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin: 0px;
+}
+
+user agent stylesheet
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (min-width: 1023px){
+.css-2ugu0-DescriptionTitle {
+    width: 200px;
+}
+}
+.css-2ugu0-DescriptionTitle {
+    color: rgb(120, 120, 120);
+    vertical-align: top;
+    width: 120px;
+}
+user agent stylesheet
+dt {
+    display: block;
+}
+
+.css-11yx0y9-DescriptionDetail {
+    flex: 1 1 0%;
+    color: rgb(0, 0, 0);
+    vertical-align: top;
+    margin: 0px 0px 0px 12px;
+}
+user agent stylesheet
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.css-14a04hc-DescriptionList {
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    padding: 14px 0px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin: 0px;
+}
+user agent stylesheet
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (min-width: 1023px){
+.css-2ugu0-DescriptionTitle {
+    width: 200px;
+}
+}
+
+.css-2ugu0-DescriptionTitle {
+    color: rgb(120, 120, 120);
+    vertical-align: top;
+    width: 120px;
+}
+
+user agent stylesheet
+dt {
+    display: block;
+}
+
+.css-11yx0y9-DescriptionDetail {
+    flex: 1 1 0%;
+    color: rgb(0, 0, 0);
+    vertical-align: top;
+    margin: 0px 0px 0px 12px;
+}
+user agent stylesheet
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.css-14a04hc-DescriptionList {
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    padding: 14px 0px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin: 0px;
+}
+user agent stylesheet
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+@media (min-width: 1023px){
+.css-2ugu0-DescriptionTitle {
+    width: 200px;
+}
+}
+
+.css-2ugu0-DescriptionTitle {
+    color: rgb(120, 120, 120);
+    vertical-align: top;
+    width: 120px;
+}
+user agent stylesheet
+dt {
+    display: block;
+}
+
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.css-11yx0y9-DescriptionDetail {
+    flex: 1 1 0%;
+    color: rgb(0, 0, 0);
+    vertical-align: top;
+    margin: 0px 0px 0px 12px;
+}
+
+.css-14a04hc-DescriptionList {
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    padding: 14px 0px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin: 0px;
+}
+user agent stylesheet
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (min-width: 1023px){
+.css-2ugu0-DescriptionTitle {
+    width: 200px;
+}
+}
+
+.css-2ugu0-DescriptionTitle {
+    color: rgb(120, 120, 120);
+    vertical-align: top;
+    width: 120px;
+}
+
+user agent stylesheet
+dt {
+    display: block;
+}
+
+.css-11yx0y9-DescriptionDetail {
+    flex: 1 1 0%;
+    color: rgb(0, 0, 0);
+    vertical-align: top;
+    margin: 0px 0px 0px 12px;
+}
+user agent stylesheet
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.css-1gkwvxt-DescriptionList {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    padding: 14px 0px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin: 0px;
+}
+
+user agent stylesheet
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (min-width: 1023px){
+.css-2ugu0-DescriptionTitle {
+    width: 200px;
+}
+}
+
+.css-2ugu0-DescriptionTitle {
+    color: rgb(120, 120, 120);
+    vertical-align: top;
+    width: 120px;
+}
+user agent stylesheet
+dt {
+    display: block;
+}
+
+.css-17t919k-SummaryDetail {
+    display: block;
+    white-space: pre-wrap;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    margin: 10px 0px 0px;
+}
+user agent stylesheet
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+@media (min-width: 720px){
+.css-1jjny0x {
+    display: none;
+}
+}
+.css-1jjny0x {
+    position: fixed;
+    bottom: 0;
+    z-index: 51;
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 1px solid #d2d2d2;
+}
+
+footer {
+    display: block;
+}
+
+.css-1ho7bw2 {
+    box-sizing: border-box;
+    height: 56px;
+    padding: 8px 0 4px;
+}
+
+user agent stylesheet
+nav {
+    display: block;
+}
+
+.css-vsvx7g-VisualUl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+user agent stylesheet
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+
+.css-1hz4g3g {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    height: 100%;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.css-1hz4g3g > a {
+    display: block;
+    color: inherit;
+    font-size: 11.5px;
+    -webkit-letter-spacing: -0.2px;
+    -moz-letter-spacing: -0.2px;
+    -ms-letter-spacing: -0.2px;
+    letter-spacing: -0.2px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    line-height: normal;
+    height: 100%;
+    margin: 0 10px;
+}
+
+a {
+    background-color: transparent;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.css-1hz4g3g > a > svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.css-1u7hvrn {
+    width: 24px;
+    height: 24px;
+}
+
+user agent stylesheet
+svg:not(:root) {
+    overflow: hidden;
+}
+
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+.css-1u7hvrn .fillTarget {
+    fill: #292a32;
+}
+
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+.css-vuw3o9 {
+    color: #292a32;
+    line-height: 17px;
+    white-space: nowrap;
+    padding-top: 3px;
+}
+user agent stylesheet
+div {
+    display: block;
+}

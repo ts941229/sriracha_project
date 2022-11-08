@@ -1,0 +1,15 @@
+body {
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.back-shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* position fixed 에서 absolute로 수정 */
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    left: 0;
+}
