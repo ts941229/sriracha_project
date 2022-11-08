@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	유진입니다 ~
+	유진입니다 ~ 수정
 </body>
 </html>
