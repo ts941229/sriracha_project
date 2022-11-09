@@ -53,7 +53,7 @@
                             <div class="chart_cont1 swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="poster">
-                                        <a href="./contents.jsp">
+                                        <a href="../view/contents.jsp">
                                         <img src="../img/black.jpg" style="max-width:250px; width:100%; height:auto;"  alt="침묵">
                                         <div class="rank"><strong>1</strong></div>
                                     </a>
