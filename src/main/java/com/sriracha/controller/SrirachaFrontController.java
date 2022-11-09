@@ -1,6 +1,7 @@
 package com.sriracha.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,10 +33,24 @@ public class SrirachaFrontController extends HttpServlet{
 			case "/sriracha/test.do" :
 				forward = new TestController().execute(req, resp);
 				break;
+				
+			case "/sriracha/login.do" :
+				
+				forward = new LoginAction().execute(req, resp);		
+				break;
+				//로그인
+				//
+				//
+				//
+				//회원가입
+				//
+				//
+				//
+				//회원수정
 		}
 		
 		if(forward!=null) {
-			if(forward.isRedirect()) {
+			if(forward.isRedirect()) {	
 				resp.sendRedirect(forward.getPath());
 			}else {
 				req.getRequestDispatcher(forward.getPath()).forward(req, resp);

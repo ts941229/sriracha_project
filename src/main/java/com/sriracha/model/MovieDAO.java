@@ -13,6 +13,17 @@ public class MovieDAO {
 		sqlSession = factory.openSession();
 	}
 	
-	
+//	public boolean login() {
+//		boolean result = false;
+//		
+//		if()
+//		
+//		return result;
+//	}
+	public String login(String user_id) {
+		
+		return sqlSession.selectOne("Test.login",user_id);
+	}
+
 	
 }
