@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sriracha.action.ActionForward;
 
-@WebServlet("*.do")
-public class SrirachaFrontController extends HttpServlet{
+@WebServlet("*.mo")
+public class AdminFrontController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,36 +29,9 @@ public class SrirachaFrontController extends HttpServlet{
 		ActionForward forward = null;
 		
 		switch(requestURI) {
-			case "/sriracha/get_main_page.do" :
+			case "/admin/movie_set.mo" :
 				forward = new MovieSetController().execute(req, resp);
 				break;
-			
-				
-				
-				
-				
-			
-			
-				
-				
-				
-				
-				
-				
-				
-			
-				
-			
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
 				
 		}
 		

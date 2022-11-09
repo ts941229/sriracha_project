@@ -22,7 +22,7 @@
           <p class="error-message-empty-id error-message"></p>
           <input class="inputBox login-pw" type="password" name="pw" placeholder="비밀번호를 입력하세요."/>
           <p class="error-message-empty-pw error-message"></p>
-          <input type="button" class="login-button" value="로그인" onclick="location.href='./main.jsp'" />
+          <input type="button" class="login-button" value="로그인" onclick="location.href='/sriracha/get_main_page.do'" />
           <div class="form-bottom">
             <div class="login-remember">
               <input type="checkbox" id="idRememberCB" />

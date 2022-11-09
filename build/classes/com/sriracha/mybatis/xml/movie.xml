@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Movie">
+	<select id="selectMovieById" parameterType="_int" resultType="MovieDTO">
+		SELECT MOVIE_ID , MOVIE_TITLE , MOVIE_OVERVIEW , MOVIE_POPULARITY , MOVIE_VOTE_AVERAGE , MOVIE_VOTE_COUNT , MOVIE_POSTER_PATH , MOVIE_BACKDROP_PATH , MOVIE_ADULT , MOVIE_DATE , MOVIE_SUBJECT FROM MOVIE WHERE MOVIE_ID = #{movie_id}
+	</select>
+	
+	<insert id="movieInsert" parameterType="MovieDTO">
+		INSERT INTO MOVIE VALUES(#{movie_id}, #{movie_title}, #{movie_overview}, #{movie_popularity}, #{movie_vote_average}, #{movie_vote_count}, #{movie_poster_path}, #{movie_backdrop_path}, #{movie_adult}, #{movie_date}, #{movie_subject})
+	</insert>
+	
+		
+</mapper>
