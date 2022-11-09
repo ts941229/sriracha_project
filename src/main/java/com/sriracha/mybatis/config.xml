@@ -21,6 +21,7 @@
 	 
 	 <mappers>
 	 	<mapper resource="com/sriracha/mybatis/xml/test.xml"/>
+	 	<mapper resource="com/sriracha/mybatis/xml/user.xml"/>
  	</mappers>
  	
 	 

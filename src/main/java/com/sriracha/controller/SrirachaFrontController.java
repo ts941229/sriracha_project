@@ -34,9 +34,13 @@ public class SrirachaFrontController extends HttpServlet{
 				forward = new TestController().execute(req, resp);
 				break;
 				
+				
+				
+				
+				
 			case "/sriracha/login.do" :
 				
-				forward = new LoginAction().execute(req, resp);		
+				forward = new LoginController().execute(req, resp);		
 				break;
 				//로그인
 				//

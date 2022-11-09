@@ -5,49 +5,41 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.sriracha.action.Action;
 import com.sriracha.action.ActionForward;
 import com.sriracha.model.MovieDAO;
+import com.sriracha.model.UserDAO;
 import com.sriracha.model.UserDTO;
 
-public class LoginAction implements Action{
+public class LoginController implements Action{
 @Override
 public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) {
 	ActionForward forward = new ActionForward();
-	MovieDAO mdao = new MovieDAO();
+	UserDAO udao = new UserDAO();
 	
-	String inputPw = req.getParameter("user_pw");
+	String user_pw = req.getParameter("user_pw");
 	String user_id = req.getParameter("user_id");
 	
-	String realPw = mdao.login(user_id);
+	String real_pw = udao.login(user_id);
 	
-	PrintWriter out;
-	
-		
-		
-		
-
+	req.setAttribute("user_pw", user_pw);
+	req.setAttribute("real_pw", real_pw);
 	
 	
-	if(inputPw.equals(realPw)) {
+	
+	
+	if(user_pw.equals(real_pw)) {
 		
 		forward.setRedirect(false);
 		forward.setPath("/view/main.jsp" );
 		
 	}
 	else {
-		try {
-			out = resp.getWriter();
-			out.println("<script>alert('아디비번틀림'); location.href='/view/login.jsp';</script>");
-			out.flush();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		/*
-		 * forward.setRedirect(false); forward.setPath("/view/login.jsp" );
-		 */
+		
+		 forward.setRedirect(false); forward.setPath("/view/login.jsp" );
+		 
 	}
 	return forward;
 }
