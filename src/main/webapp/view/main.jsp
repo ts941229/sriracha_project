@@ -48,6 +48,8 @@
             <div class="overlay"></div>
         </div>
     </header>
+    
+    <div class="forheader" style="margin-top: 65px"></div>
 
     <main class="first_contents-box">
         <div class="contents">
@@ -62,7 +64,7 @@
                             	<c:forEach var="nowPlayingMovie" items="${nowPlayingMovieList }" varStatus="status">
                             		<div class="swiper-slide">
 	                                    <div class="poster">
-	                                        <a href="./contents.jsp">
+	                                        <a href="/sriracha/get_contents_page.do?movie_id=${nowPlayingMovie.movie_id }">
 	                                        <img src="https://image.tmdb.org/t/p/original${nowPlayingMovie.movie_poster_path}" style="max-width:250px; width:100%; height:auto;"  alt="침묵">
 	                                        <div class="rank"><strong>${status.count }</strong></div>
 	                                    </a>
@@ -99,7 +101,7 @@
                             	<c:forEach var="popularMovie" items="${popularMovieList }" varStatus="status">
                             		<div class="swiper-slide">
 	                                    <div class="poster">
-	                                        <a href="./contents.jsp">
+	                                        <a href="/sriracha/get_contents_page.do?movie_id=${popularMovie.movie_id }">
 	                                        <img src="https://image.tmdb.org/t/p/original${popularMovie.movie_poster_path}" style="max-width:250px; width:100%; height:auto;"  alt="침묵">
 	                                        <div class="rank"><strong>${status.count }</strong></div>
 	                                    </a>
@@ -136,7 +138,7 @@
                             	<c:forEach var="topRatedMovie" items="${topRatedMovieList }" varStatus="status">
                             		<div class="swiper-slide">
 	                                    <div class="poster">
-	                                        <a href="./contents.jsp">
+	                                        <a href="/sriracha/get_contents_page.do?movie_id=${topRatedMovie.movie_id }">
 	                                        <img src="https://image.tmdb.org/t/p/original${topRatedMovie.movie_poster_path}" style="max-width:250px; width:100%; height:auto;"  alt="침묵">
 	                                        <div class="rank"><strong>${status.count }</strong></div>
 	                                    </a>
@@ -173,7 +175,7 @@
                             	<c:forEach var="upComingMovie" items="${upComingMovieList }" varStatus="status">
                             		<div class="swiper-slide">
 	                                    <div class="poster">
-	                                        <a href="./contents.jsp">
+	                                        <a href="/sriracha/get_contents_page.do?movie_id=${upComingMovie.movie_id }">
 	                                        <img src="https://image.tmdb.org/t/p/original${upComingMovie.movie_poster_path}" style="max-width:250px; width:100%; height:auto;"  alt="침묵">
 	                                        <div class="rank"><strong>${status.count }</strong></div>
 	                                    </a>

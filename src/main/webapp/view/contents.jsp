@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,11 +18,12 @@
 </head>
 
 <body>
+	<c:set var="movie" value="${requestScope.movie }"></c:set>
     <!-- 메뉴 헤더입니다. -->
     <header class="menu-box">
         <div class="menu">
             <div class="menu_left">
-                <a href="./main.jsp"><img class="menu_logo" src="../img/logo.png"
+                <a href="/sriracha/get_main_page.do"><img class="menu_logo" src="../img/logo.png"
                         style="max-width:200px; width:100%; height:auto;" /></a>
             </div>
             <div class="menu_right">
@@ -37,9 +40,11 @@
         </div>
     </header>
     <!-- 여기까지 메뉴 헤더 -->
-
+	<div class="forheader" style="margin-top: 65px"></div>
     <!-- 메뉴바 밑에 콘텐츠 썸네일 -->
-    <div class="thumbnail"></div>
+    <div class="thumbnail">
+    	<img class="thumbnail" src="https://image.tmdb.org/t/p/original${movie.movie_backdrop_path }" alt="">
+    </div>
     <!-- 여기까지 썸네일 -->
 
     <!-- 썸네일 밑에 겹쳐있는 콘텐츠 정보들입니다. -->
@@ -47,7 +52,7 @@
 
         <!-- 왼쪽 포스터입니다. -->
         <div class="left-column">
-            <img src="../img/ironrain.jpg" alt="강철비2: 정상회담">
+            <img src="https://image.tmdb.org/t/p/original${movie.movie_poster_path }" alt="">
         </div>
         <!-- 여기까지 왼쪽 포스터 -->
 
@@ -55,30 +60,26 @@
         <div class="right-column">
             <!-- 첫번째 줄 -->
             <div class="content_info">
-                <span class="gray">예매 순위 ·&nbsp;</span>
-                <span class="white">1위(56%)&nbsp;</span>
-                <span class="gray">개봉 ·&nbsp;</span>
-                <span class="white">오늘 개봉 &nbsp;</span>
-                <span class="gray">누적 관객 ·&nbsp;</span>
-                <span class="white">3,870명</span>
+                <span class="gray">인기 점수 ·&nbsp;</span>
+                <span class="white">${movie.movie_popularity }점&nbsp;</span>
             </div>
             <!-- 첫번째 줄 끝 -->
 
             <!-- 두번째 줄 작품명 -->
             <div class="content_info">
-                <span class="content_title">강철비2: 정상회담</span>
+                <span class="content_title">${movie.movie_title}</span>
             </div>
             <!-- 두번째 줄 작품명 끝 -->
 
             <!-- 세번째 줄 년도, 장르, 나라-->
             <div class="content_info">
-                <span class="content_type">2019 · 드라마 · 한국</span>
+                <span class="content_type">${movie.movie_date }</span>
             </div>
             <!-- 세번째 줄 년도, 장르, 나라 끝 -->
 
             <!-- 네번째 줄 평점 -->
             <div class="content_info">
-                <span class="content_star">평점 ★2.9 (690명)</span>
+                <span class="content_star">평점 ★${movie.movie_vote_average/2 } (${movie.movie_vote_count }명)</span>
             </div>
             <!-- 네번째 줄 평점 끝 -->
 
@@ -147,15 +148,16 @@
                             <!-- 여기입니다 -->
 
                         </div>
-                        <span class="contents_contents_name contents_info">강철비2: 정상회담</span>
-                        <span class="contents_contents_info contents_info">2019 · 한국 · 드라마</span>
-                        <span class="contents_contents_runtime contents_info">2시간 12분</span>
+                        <span class="contents_contents_name contents_info">${movie.movie_title }</span>
+                        <span class="contents_contents_info contents_info">${movie.movie_date }</span>
+                        <!-- <span class="contents_contents_runtime contents_info">2시간 12분</span> -->
                         <span class="contents_contents_summary contents_info">
-                            남북미 정상회담 중, 북한 내 쿠데타로 세 정상이 납치된다!&nbsp;
-                            북미 평화협정 체결을 위한 대한민국 대통령(정우성), 북한의 최고지도자인 위원장(유연석)과&nbsp;
-                            미국 대통령(앵거스 맥페이든)간의 남북미 정상회담이 북한 원산에서 열...
+                            ${movie.movie_overview }
                         </span>
                     </div>
+                    
+                    <!-- 여기까지 했음 ------------------------------------------------------------------------------------------------------ -->
+                    
                     <!-- 첫번째(기본정보) 끝입니다 -->
 
                     <!-- 두번째(출연/제작) 시작 -->
