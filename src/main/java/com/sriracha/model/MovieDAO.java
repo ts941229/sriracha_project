@@ -33,6 +33,23 @@ public class MovieDAO {
 		List<MovieDTO> movieList = sqlSession.selectList("Movie.selectAllMovies");
 		return movieList;
 	}
+	public List<MovieDTO> selectAllNowPlayingMovies() {
+		List<MovieDTO> nowPlayingMovieList = sqlSession.selectList("Movie.selectAllNowPlayingMovies");
+		return nowPlayingMovieList;
+	}
+	public List<MovieDTO> selectAllPopularMovies() {
+		List<MovieDTO> popularMovieList = sqlSession.selectList("Movie.selectAllPopularMovies");
+		return popularMovieList;
+	}
+	public List<MovieDTO> selectAllTopRatedMovies() {
+		List<MovieDTO> topRatedMovieList = sqlSession.selectList("Movie.selectAllTopRatedMovies");
+		return topRatedMovieList;
+	}
+	public List<MovieDTO> selectAllUpComingMovies() {
+		List<MovieDTO> upComingMovieList = sqlSession.selectList("Movie.selectAllUpComingMovies");
+		return upComingMovieList;
+	}
+	
 	
 	
 	

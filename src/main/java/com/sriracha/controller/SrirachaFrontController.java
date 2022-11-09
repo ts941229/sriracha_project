@@ -30,7 +30,7 @@ public class SrirachaFrontController extends HttpServlet{
 		
 		switch(requestURI) {
 			case "/sriracha/get_main_page.do" :
-				forward = new MovieSetController().execute(req, resp);
+				forward = new GetMainPageController().execute(req, resp);
 				break;
 			
 				
