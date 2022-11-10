@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +23,8 @@
 
 <body>
 
+
+
     <!-- 헤더 시작 -->
     <header class="menu-box">
         <div class="menu">
@@ -34,8 +38,8 @@
                     <i class="fas fa-search"></i>
                     <input class="menu_search" type="text" placeholder="작품 제목,배우,감독을 검색해보세요.">
                 </div>
-                <span class="menu_login" onclick="location.href='./login.jsp'" style="cursor: pointer;">로그아웃 </span>
-                <span class="menu_sign-up" id="js-signUp" onclick="location.href='./mypage.jsp'"
+                <span class="menu_login" onclick="location.href='/sriracha/logout.do'" style="cursor: pointer;">로그아웃 </span>
+                <span class="menu_sign-up" id="js-signUp" onclick="location.href='../view/mypage.jsp'"
                     style="cursor: pointer;">마이페이지</span>
             </div>
             

@@ -57,6 +57,7 @@
       </div>
     </div>
   </body>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
   window.onload = function() {
@@ -119,9 +120,6 @@
 		            setCookie("id", document.loginForm.user_id.value, 0); //날짜를 0으로 저장하여 쿠키삭제
 		        }
 				
-				
-				
-
 				document.loginForm.submit();
 
 			}
