@@ -108,7 +108,7 @@
                         <div class="rate">★5.0</div>
                     </li>
                     <li class="secondLi">
-                        <a href="./comment_detail.jsp">
+                        <a href="${pageContext.request.contextPath }/sriracha/commentDetailView.do?board_num=1">
                             <span class="commentText">
                                 <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Cumque repudiandae ad maiores recusandae necessitatibus
@@ -156,7 +156,7 @@
             <div class="commentBox">
                 <ul class="commentUl">
                     <li class="firstLi">
-                        <a href="./mypage.jsp" class="connectToMypage">
+                        <a href="/view/mypage.jsp" class="connectToMypage">
                             <div class="photoAndName">
                                 <img class="photo" src="https://picsum.photos/200/200?random=3" alt="사진이 없습니다">
                                 <span class="name">홍길동</span>
@@ -165,7 +165,7 @@
                         <div class="rate">★3.0</div>
                     </li>
                     <li class="secondLi">
-                        <a href="comment_detail.jsp">
+                        <a href="/view/comment_detail.jsp">
                             <span class="commentText">
                                 우주의 낭만과 공포, 죽음에 대한 두려움과 생에 대한 감사함이 고루 느껴지는 황홀하고도 섬찟한 우주 비행.
                                 ps. 그 어떤 극찬이 이 영화를 완벽히 형용할 수 있을까. 영화가 끝나는 순간, 떨어져가던 의욕의 맥박이 격렬히 요동치는 기분이며,
@@ -189,7 +189,7 @@
             <div class="commentBox">
                 <ul class="commentUl">
                     <li class="firstLi">
-                        <a href="./mypage.jsp" class="connectToMypage">
+                        <a href="/view/mypage.jsp" class="connectToMypage">
                             <div class="photoAndName">
                                 <img class="photo" src="https://picsum.photos/200/200?random=1" alt="사진이 없습니다">
                                 <span class="name">김철수</span>
@@ -198,7 +198,7 @@
                         <div class="rate">★4.0</div>
                     </li>
                     <li class="secondLi">
-                        <a href="./comment_detail.jsp">
+                        <a href="/view/comment_detail.jsp">
                             <span class="commentText">
                                 새삼스레 온몸을 압도해오는 우주의 묵직한 존재감
                                 모든 것이 안겨있지만 그 무엇도 안아주지 않는,

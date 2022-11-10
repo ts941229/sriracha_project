@@ -53,15 +53,20 @@ public class SrirachaFrontController extends HttpServlet{
 				forward = new CommentListController().execute(req, resp);
 				System.out.println("프론트 컨트롤러 도착 !!!!");
 				break;
+				
+				
+				
+				
+				
+			case "/sriracha/commentDetailView.do" :
+				forward = new CommentDetailViewComtroller().execute(req, resp);
 		}
 		
 		if(forward!=null) {
 			if(forward.isRedirect()) {
 				resp.sendRedirect(forward.getPath());
 			}else {
-				RequestDispatcher disp = req.getRequestDispatcher(forward.getPath());
-				disp.forward(req, resp);
-//				req.getRequestDispatcher(forward.getPath()).forward(req, resp);
+				req.getRequestDispatcher(forward.getPath()).forward(req, resp);
 			}
 		}
 		
