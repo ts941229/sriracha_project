@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,8 +16,6 @@
 </head>
 
 <body>
-	<c:set var="boardList" value="${requestScope.boardList}" />
-	
     <!-- 메뉴 헤더입니다. -->
     <header class="menu-box">
         <div class="menu">
@@ -234,7 +228,6 @@
                     <!-- 세번째(별점 그래프) 끝 -->
 
                     <!-- 네번째(코멘트) 시작 -->
-            
                     <div class="contents_contents_column">
                         <div class="column_column">
                             <div>
@@ -243,11 +236,9 @@
                             </div>
 
                             <!-- 코멘트 더보기 링크 연결해주세요 -->
-                            
-                            <a href="${pageContext.request.contextPath }/sriracha/commentView.do?board_num=1">
+                            <a href="./commentPage.jsp">
                                 <span class="contents_contents_more">더보기</span>
                             </a>
-                        
                             <!-- 여기입니다 -->
 
                         </div>

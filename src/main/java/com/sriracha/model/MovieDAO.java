@@ -12,6 +12,8 @@ public class MovieDAO {
 	public MovieDAO() {
 		sqlSession = factory.openSession();
 	}
+
+	
 	
 	
 	
