@@ -14,6 +14,7 @@ public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) {
 	
 	HttpSession session =req.getSession();
 	session.removeAttribute("session_id");
+	session.removeAttribute("session_pw");
 	session.invalidate();
 	
 	forward.setRedirect(false); 

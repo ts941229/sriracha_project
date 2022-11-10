@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.sriracha.action.ActionForward;
 
@@ -28,6 +29,7 @@ public class SrirachaFrontController extends HttpServlet{
 		
 		String requestURI = req.getRequestURI();
 		ActionForward forward = null;
+		HttpSession session = req.getSession();
 		
 		switch(requestURI) {
 			case "/sriracha/test.do" :
@@ -35,6 +37,10 @@ public class SrirachaFrontController extends HttpServlet{
 				break;
 			case "/sriracha/logout.do" :	
 				forward = new LogoutController().execute(req, resp);
+				break;
+			case "/sriracha/modiif.do" :
+				
+				forward = new modiifController().execute(req, resp);
 				break;
 				
 				

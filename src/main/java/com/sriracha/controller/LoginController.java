@@ -27,6 +27,7 @@ public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) {
 	req.setAttribute("user_pw", user_pw);
 	req.setAttribute("real_pw", real_pw);
 	
+	HttpSession session =req.getSession();
 	
 	
 	
@@ -35,8 +36,8 @@ public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) {
 	
 	if(user_pw.equals(real_pw)) {
 
-		HttpSession session =req.getSession();
 		session.setAttribute("session_id", user_id);
+		session.setAttribute("session_pw", real_pw);
 		
 		forward.setRedirect(false);
 		forward.setPath("/view/main.jsp" );

@@ -7,5 +7,8 @@
 	<select id="login" parameterType="string" resultType="string">
 		SELECT user_pw FROM "USER" WHERE USER_ID = #{user_id}
 	</select>
-
+	
+	<update id="updateUser">
+		UPDATE "USER" SET USER_NAME = #{user_name}, USER_PW = #{user_pw} WHERE USER_ID = #{user_id}
+	</update>
 </mapper>
