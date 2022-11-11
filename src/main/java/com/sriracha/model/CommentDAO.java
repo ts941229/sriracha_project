@@ -15,8 +15,8 @@ public class CommentDAO {
 		sqlsession = factory.openSession(true);
 	}
 
-	public List<FullDTO> getComment(int board_num) {
-		List<FullDTO> commentList = sqlsession.selectList("Comment.getComment");
+	public List<FullDTO> getComment(int board_num, int movie_id) {
+		List<FullDTO> commentList = sqlsession.selectList("Comment.getComment", board_num);
 		
 		return commentList;
 	}

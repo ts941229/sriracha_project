@@ -3,7 +3,7 @@
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
-
+    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,22 +12,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스리라차피디아</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/comment_slide.css">
+    <link rel="stylesheet" href="../css/comment_slide2.css">
     <link rel="stylesheet" href="../css/comment_modal_detail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
 	<c:set var="boardList" value="${requestScope.boardList}" />
-	
     <!-- 메뉴 헤더입니다. -->
     <header class="menu-box">
         <div class="menu">
             <div class="menu_left">
-                <a href="./main.jsp"><img class="menu_logo" src="../img/logo.png"
+                <a href="main.html"><img class="menu_logo" src="../img/logo.png"
                         style="max-width:200px; width:100%; height:auto;" /></a>
+                <span class="menu_movie">영화</span>
+                <span class="menu_tv">TV 프로그램</span>
+                <span class="menu_book">책</span>
             </div>
             <div class="menu_right">
                 <div class="menu_search-box">
@@ -38,7 +44,37 @@
                 <span class="menu_sign-up" id="js-signUp" onclick="location.href='./mypage.jsp'"
                     style="cursor: pointer;">마이페이지</span>
             </div>
-            
+            <div class="pop_sign-up">
+                <img src="img/pop_logo.png" class="pop_logo">
+                <span class="pop_title">회원가입</span>
+                <form action="">
+                    <div class="pop_input-box">
+                        <input type="text" placeholder="이름">
+                    </div>
+                    <div class="pop_input-box">
+                        <input type="text" placeholder="이메일">
+                    </div>
+                    <div class="pop_input-box">
+                        <input type="text" placeholder="비밀번호">
+                    </div>
+                </form>
+                <button class="pop_btn">회원가입</button>
+                <div class="pop_already">
+                    <span>이미 가입하셨나요?&nbsp;</span>
+                    <a href="">
+                        <span>로그인</span>
+                    </a>
+                </div>
+                <span class="pop_or">OR</span>
+                <div class="pop_line-box">
+                    <div class="pop_line"></div>
+                    <div class="pop_line"></div>
+                </div>
+                <button class="pop_facebook">
+                    <i class="fab fa-facebook-square"></i>
+                    <span>Facebook 으로 로그인</span>
+                </button>
+            </div>
             <div class="overlay"></div>
         </div>
     </header>
@@ -92,7 +128,7 @@
             <div class="content_info">
                 <!-- 보고싶어요 버튼 -->
                 <div class="content_info-left">
-                    <div class="content_want-see" style="cursor: pointer;">
+                    <div class="content_want-see">
                         <i class="fas fa-plus plus-rotate"></i>
                         <span>보고싶어요</span>
                     </div>
@@ -136,9 +172,9 @@
             <div>
                 <div class="leave-comment-box">
                     <span class="go-leave-comment">
-                        이 작품에 대한 회원 님의 평가를 글로 남겨보세요.
+                        이 작품에 대한 준혁 님의 평가를 글로 남겨보세요.
                     </span>
-                    <span class="leave-comment" id="btn-modal" style="cursor: pointer;">코멘트 남기기</span>
+                    <span class="leave-comment" id="btn-modal">코멘트 남기기</span>
                 </div>
                 <div class="contents_contents-box">
                     <!-- 첫번째(기본정보) 박스입니다 -->
@@ -165,57 +201,101 @@
                     <!-- 첫번째(기본정보) 끝입니다 -->
 
                     <!-- 두번째(출연/제작) 시작 -->
-                    <div class="contents_contents_column">
-                        <span class="contents_contents_title">출연/제작</span>
-                        <div class="contents_contents_container">
-                            <div class="contents_contents_content">
-                                <div class="contents_contents_profile">
-                                    <img src="../img/yang.jfif" alt="양우석" class="profile_img">
-                                    <div>
-                                        <span class="profile_name">양우석</span>
-                                        <span class="profile_job">감독</span>
-                                    </div>
-                                </div>
-                                <div class="contents_contents_profile">
-                                    <img src="../img/actor1.jfif" alt="정우성" class="profile_img">
-                                    <div>
-                                        <span class="profile_name">정우성</span>
-                                        <span class="profile_job">주연</span>
-                                    </div>
-                                </div>
-                                <div class="contents_contents_profile">
-                                    <img src="../img/actor2.jfif" alt="곽도원" class="profile_img">
-                                    <div>
-                                        <span class="profile_name">곽도원</span>
-                                        <span class="profile_job">주연</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contents_contents_content">
-                                <div class="contents_contents_profile">
-                                    <img src="../img/actor3.jfif" alt="유연석" class="profile_img">
-                                    <div>
-                                        <span class="profile_name">유연석</span>
-                                        <span class="profile_job">주연</span>
-                                    </div>
-                                </div>
-                                <div class="contents_contents_profile">
-                                    <img src="../img/actor4.jfif" alt="앵거스 맥페이든" class="profile_img">
-                                    <div>
-                                        <span class="profile_name">앵거스 맥페이든</span>
-                                        <span class="profile_job">주연</span>
-                                    </div>
-                                </div>
-                                <div class="contents_contents_profile">
-                                    <img src="../img/actor5.jfif" alt="김상욱" class="profile_img">
-                                    <div>
-                                        <span class="profile_name">김상욱</span>
-                                        <span class="profile_job">조연</span>
+                    <section class="step">
+                        <div class="contents_contents_column">
+                            <span class="contents_contents_title">출연/제작</span>
+                            <div class="contents_contents_container">
+                                <div class="swiper-wrap">        
+                                    <!-- Swiper -->
+                                    <div #swiperRef="" class="swiper mySwiper">            
+                                        <div class="swiper-wrapper">                
+                                            <div class="swiper-slide slide">
+                                                <ul>
+                                                    <li class="contents_contents_profile">
+                                                        <img src="../img/yang.jfif" alt="양우석" class="profile_img">
+                                                        <div class="txt">
+                                                            <span class="profile_name">양우석</span>
+                                                            <span class="profile_job">감독</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="contents_contents_profile">
+                                                        <img src="../img/actor1.jfif" alt="정우성" class="profile_img">
+                                                        <div class="txt">
+                                                            <span class="profile_name">정우성</span>
+                                                            <span class="profile_job">주연</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="contents_contents_profile">
+                                                        <img src="../img/actor2.jfif" alt="곽도원" class="profile_img">
+                                                        <div class="txt">
+                                                            <span class="profile_name">곽도원</span>
+                                                            <span class="profile_job">주연</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="swiper-slide slide">
+                                                <ul>
+                                                    <li class="contents_contents_profile">
+                                                        <img src="../img/yang.jfif" alt="양우석" class="profile_img">
+                                                        <div class="txt">
+                                                            <span class="profile_name">양우석</span>
+                                                            <span class="profile_job">감독</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="contents_contents_profile">
+                                                        <img src="../img/actor1.jfif" alt="정우성" class="profile_img">
+                                                        <div class="txt">
+                                                            <span class="profile_name">정우성</span>
+                                                            <span class="profile_job">주연</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="contents_contents_profile">
+                                                        <img src="../img/actor2.jfif" alt="곽도원" class="profile_img">
+                                                        <div class="txt">
+                                                            <span class="profile_name">곽도원</span>
+                                                            <span class="profile_job">주연</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="swiper-slide slide">
+                                                <ul>
+                                                    <li class="contents_contents_profile">
+                                                        <img src="../img/yang.jfif" alt="양우석" class="profile_img">
+                                                        <div class="txt">
+                                                            <span class="profile_name">양우석</span>
+                                                            <span class="profile_job">감독</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="contents_contents_profile">
+                                                        <img src="../img/actor1.jfif" alt="정우성" class="profile_img">
+                                                        <div class="txt">
+                                                            <span class="profile_name">정우성</span>
+                                                            <span class="profile_job">주연</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="contents_contents_profile">
+                                                        <img src="../img/actor2.jfif" alt="곽도원" class="profile_img">
+                                                        <div class="txt">
+                                                            <span class="profile_name">곽도원</span>
+                                                            <span class="profile_job">주연</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div> -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
+
+                    
+                    
+
                     <!-- 두번째(출연/제작) 끝 -->
 
                     <!-- 세번째(별점 그래프) 시작 -->
@@ -234,7 +314,6 @@
                     <!-- 세번째(별점 그래프) 끝 -->
 
                     <!-- 네번째(코멘트) 시작 -->
-            
                     <div class="contents_contents_column">
                         <div class="column_column">
                             <div>
@@ -243,61 +322,110 @@
                             </div>
 
                             <!-- 코멘트 더보기 링크 연결해주세요 -->
-                            
-                            <a href="${pageContext.request.contextPath }/sriracha/commentView.do?board_num=1">
+                            <a href="${pageContext.request.contextPath }/sriracha/commentView.do?movie_id=1">
                                 <span class="contents_contents_more">더보기</span>
                             </a>
-                        
                             <!-- 여기입니다 -->
-
+         
                         </div>
-                        <div class="contents_contents_comment-container">
-                            <div class="comment-nemo">
-                                <div class="comment_user">
-                                    <img src="../img/user_profile.jfif" class="comment_user-img">
-                                    <span class="user_name">filmaholic9</span>
+                        <section class="step2">
+                            <div class="contents_contents_comment-container">
+                                <div class="swiper-wrap">        
+                                    <!-- Swiper -->
+                                    <div #swiperRef="" class="swiper mySwiper2">            
+                                        <div class="swiper-wrapper"> 
+                                            <div class="swiper-slide slide">
+                                                <ul>
+                                                    <li>
+                                                        <div class="comment-nemo">
+                                                            <div class="comment_user">
+                                                                <img src="../img/user_profile.jfif" class="comment_user-img">
+                                                                <span class="user_name">${user.userid}</span>
+                                                            </div>
+                                                            <div class="comment_comment" >
+<%--                                                             href="${pageContext.request.contextPath }/sriracha/commentPage.bo" --%>
+                                                                ${board.board_content }
+                                                            </div>
+                                                            <div class="comment_feel">
+                                                                <span class="comment_feel-good">
+                                                                    <i class="fas fa-thumbs-up"></i>
+                                                                    381
+                                                                </span>
+                                                                <span class="comment_feel-comment">
+                                                                    <i class="fas fa-comment"></i>
+                                                                    57
+                                                                </span>
+                                                            </div>
+                                                            <div class="comment_click-good">좋아요</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="swiper-slide slide">
+                                                <ul>
+                                                    <li>
+                                                        <div class="comment-nemo">
+                                                            <div class="comment_user">
+                                                                <img src="../img/user_profile.jfif" class="comment_user-img">
+                                                                <span class="user_name">filmaholic9</span>
+                                                            </div>
+                                                            <div class="comment_comment">
+                                                                대한민국 대통령 정우성에 김정은은 유연석 ㅋㅋㅋㅋㅋㅋㅋㅋ 캐스팅부터 장난하냐 ㅋㅋㅋㅋㅋㅋㅋ
+                                                                (대충 예상되는 내용)
+                                                                미국 : 평화협정 하자고 불러놓고는 자기들의 이익만 추구하며 훼방을 놓고 억지
+                                                            </div>
+                                                            <div class="comment_feel">
+                                                                <span class="comment_feel-good">
+                                                                    <i class="fas fa-thumbs-up"></i>
+                                                                    381
+                                                                </span>
+                                                                <span class="comment_feel-comment">
+                                                                    <i class="fas fa-comment"></i>
+                                                                    57
+                                                                </span>
+                                                            </div>
+                                                            <div class="comment_click-good">좋아요</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="swiper-slide slide">
+                                                <ul>
+                                                    <li>
+                                                        <div class="comment-nemo">
+                                                            <div class="comment_user">
+                                                                <img src="../img/user_profile.jfif" class="comment_user-img">
+                                                                <span class="user_name">filmaholic9</span>
+                                                            </div>
+                                                            <div class="comment_comment">
+                                                                대한민국 대통령 정우성에 김정은은 유연석 ㅋㅋㅋㅋㅋㅋㅋㅋ 캐스팅부터 장난하냐 ㅋㅋㅋㅋㅋㅋㅋ
+                                                                (대충 예상되는 내용)
+                                                                미국 : 평화협정 하자고 불러놓고는 자기들의 이익만 추구하며 훼방을 놓고 억지
+                                                            </div>
+                                                            <div class="comment_feel">
+                                                                <span class="comment_feel-good">
+                                                                    <i class="fas fa-thumbs-up"></i>
+                                                                    381
+                                                                </span>
+                                                                <span class="comment_feel-comment">
+                                                                    <i class="fas fa-comment"></i>
+                                                                    57
+                                                                </span>
+                                                            </div>
+                                                            <div class="comment_click-good">좋아요</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="swiper-button-next-2"></div>
+                                        <div class="swiper-button-prev-2"></div> -->
+                                    </div>
                                 </div>
-                                <div class="comment_comment">
-                                    대한민국 대통령 정우성에 김정은은 유연석 ㅋㅋㅋㅋㅋㅋㅋㅋ 캐스팅부터 장난하냐 ㅋㅋㅋㅋㅋㅋㅋ
-                                    (대충 예상되는 내용)
-                                    미국 : 평화협정 하자고 불러놓고는 자기들의 이익만 추구하며 훼방을 놓고 억지
-                                </div>
-                                <div class="comment_feel">
-                                    <span class="comment_feel-good">
-                                        <i class="fas fa-thumbs-up"></i>
-                                        381
-                                    </span>
-                                    <span class="comment_feel-comment">
-                                        <i class="fas fa-comment"></i>
-                                        57
-                                    </span>
-                                </div>
-                                <div class="comment_click-good">좋아요</div>
                             </div>
-                            <div class="comment-nemo">
-                                <div class="comment_user">
-                                    <img src="../img/user_profile.jfif" class="comment_user-img">
-                                    <span class="user_name">filmaholic9</span>
-                                </div>
-                                <div class="comment_comment">
-                                    대한민국 대통령 정우성에 김정은은 유연석 ㅋㅋㅋㅋㅋㅋㅋㅋ 캐스팅부터 장난하냐 ㅋㅋㅋㅋㅋㅋㅋ
-                                    (대충 예상되는 내용)
-                                    미국 : 평화협정 하자고 불러놓고는 자기들의 이익만 추구하며 훼방을 놓고 억지
-                                </div>
-                                <div class="comment_feel">
-                                    <span class="comment_feel-good">
-                                        <i class="fas fa-thumbs-up"></i>
-                                        381
-                                    </span>
-                                    <span class="comment_feel-comment">
-                                        <i class="fas fa-comment"></i>
-                                        57
-                                    </span>
-                                </div>
-                                <div class="comment_click-good">좋아요</div>
-                            </div>
-                        </div>
+                        </section>
                     </div>
+            
                     <!-- 네번째(코멘트) 끝 -->
 
                     <!-- <div class="contents_contents_column">
@@ -409,6 +537,7 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/star.js"></script>
+
 </body>
 <script>
     const modal = document.getElementById("modal")

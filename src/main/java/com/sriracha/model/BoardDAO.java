@@ -15,9 +15,9 @@ public class BoardDAO {
 		sqlSession = factory.openSession(true);
 	}
 	
-	public List<FullDTO> getBoardList(int board_num) {
+	public List<FullDTO> getBoardList(int movie_id) {
 		
-		List<FullDTO> boardList = sqlSession.selectList("Board.getBoardList", board_num);
+		List<FullDTO> boardList = sqlSession.selectList("Board.getBoardList", movie_id);
 		
 		return boardList;
 		

@@ -51,7 +51,6 @@ public class SrirachaFrontController extends HttpServlet{
 				
 			case "/sriracha/commentView.do" :
 				forward = new CommentListController().execute(req, resp);
-				System.out.println("프론트 컨트롤러 도착 !!!!");
 				break;
 				
 				
@@ -59,7 +58,8 @@ public class SrirachaFrontController extends HttpServlet{
 				
 				
 			case "/sriracha/commentDetailView.do" :
-				forward = new CommentDetailViewComtroller().execute(req, resp);
+				forward = new CommentDetailViewController().execute(req, resp);
+				break;
 		}
 		
 		if(forward!=null) {

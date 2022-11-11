@@ -108,7 +108,7 @@
                         <div class="rate">★5.0</div>
                     </li>
                     <li class="secondLi">
-                        <a href="${pageContext.request.contextPath }/sriracha/commentDetailView.do?board_num=1">
+                        <a href="${pageContext.request.contextPath }/sriracha/commentDetailView.do?board_num=1&movie_id=1">
                             <span class="commentText">
                                 <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Cumque repudiandae ad maiores recusandae necessitatibus
@@ -151,7 +151,6 @@
             </div>
             </c:forEach>
             </c:if>
-            --------------------------------------------------------
 
             <div class="commentBox">
                 <ul class="commentUl">

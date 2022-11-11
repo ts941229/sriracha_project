@@ -20,9 +20,9 @@ public class CommentListController implements Action{
 //		
 //		int movie_id = Integer.parseInt(m_id);
 		
-		int board_num = Integer.parseInt(req.getParameter("board_num"));
+		int movie_id = Integer.parseInt(req.getParameter("movie_id"));
 		
-		req.setAttribute("boardList", bdao.getBoardList(board_num));
+		req.setAttribute("boardList", bdao.getBoardList(movie_id));
 		
 		forward.setRedirect(false);
 		forward.setPath("/view/commentPage.jsp");
