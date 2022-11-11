@@ -49,6 +49,35 @@ public class SrirachaFrontController extends HttpServlet{
 				
 				
 				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 			case "/sriracha/commentView.do" :
 				forward = new CommentListController().execute(req, resp);
 				break;
