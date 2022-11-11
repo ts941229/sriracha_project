@@ -15,6 +15,27 @@ public class UserDAO {
 		sqlSession = factory.openSession(true);
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public String login(String user_id) {
 		
 		return sqlSession.selectOne("User.login",user_id);
@@ -28,14 +49,10 @@ public class UserDAO {
 		datas.put("user_pw", user_pw);
 
 		if(sqlSession.update("User.updateUser", datas) != 0) {
-
 			/* sqlSession.commit(); */
 			result = true;
 		}
-		
-		
 		return result;
-		
 	}
 	
 }

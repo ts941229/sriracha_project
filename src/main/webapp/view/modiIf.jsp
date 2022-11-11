@@ -25,7 +25,7 @@
     <div class="modiIf">
       <form class="modiIfForm" id="modiIfForm" name="modiIfForm" action="/sriracha/modiif.do" method="post">
 	        <h2>회원 정보수정</h2>
-	        <input class="modiIf-content modiIf-id" id='id' type="text" placeholder="${session_id}" readonly>
+	        <input class="modiIf-content modiIf-id" id='id' type="text" value="${session_id}" readonly>
 	        <!-- <p class="alert nameMessage">이름 변경 희망시 입력하세요</p> -->
 	          <div class="error-message-empty-id" id="id-text">이름을 입력해주세요.</div>
 	        <div class="iconInput">
