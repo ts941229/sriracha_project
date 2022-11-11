@@ -30,17 +30,13 @@ public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) {
 	HttpSession session =req.getSession();
 	
 	
-	
-	
-	
-	
 	if(user_pw.equals(real_pw)) {
 
 		session.setAttribute("session_id", user_id);
 		session.setAttribute("session_pw", real_pw);
 		
 		forward.setRedirect(false);
-		forward.setPath("/view/main.jsp" );
+		forward.setPath("/sriracha/get_main_page.do" );
 		
 		
 	}
